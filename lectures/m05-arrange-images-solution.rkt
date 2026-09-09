@@ -1,6 +1,6 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-beginner-reader.ss" "lang")((modname m05-arrange-images-v6-solution) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #t)))
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname m05-arrange-images-solution) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #t)))
 (require spd/tags)
 (require 2htdp/image)
 
@@ -77,6 +77,11 @@ here, and set the stage for a more elaborate version later.
 ;(define (arrange-images loi) empty-image) ;stub
 
 (@template-origin fn-composition)  
+
+(@template
+ (define (arrange-images loi)
+   (layout-images (sort-images loi))))
+
 (define (arrange-images loi)
   (layout-images (sort-images loi)))
 
