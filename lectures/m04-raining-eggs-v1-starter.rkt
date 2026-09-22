@@ -64,7 +64,6 @@
   (big-bang ws           ; WS
     (on-tick   tock)     ; WS -> WS
     (to-draw   render)   ; WS -> Image
-    (stop-when ...)      ; WS -> Boolean
     (on-mouse  ...)      ; WS Integer Integer MouseEvent -> WS
     (on-key    ...)))    ; WS KeyEvent -> WS
 
