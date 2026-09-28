@@ -51,7 +51,7 @@
 
 (define GRASS-COLOR "green")
 (define GRASS-WIDTH 10)
-(define GRASS-Y HEIGHT)
+(define GRASS-Y (sub1 HEIGHT))
 (define GRASS-SPACING 10)
 
 (define SUN (overlay (circle 45 "solid" "yellow")
