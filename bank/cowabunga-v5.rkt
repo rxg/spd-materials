@@ -52,9 +52,12 @@
 (define-struct cow (x dx))
 ;; Cow is (make-cow Natural Integer)
 ;; interp. (make-cow x dx) is a cow with x coordinate x and x velocity dx
-;;         the x is the center of the cow, in the interval [0, WIDTH]
+;;         the x is the center of the cow
 ;;         x  is in screen coordinates (pixels)
 ;;         dx is in pixels per tick
+;;         CONSTRAINT: x is in the interval [0, WIDTH]
+;;         Note that since x is the center of the cow, the cow is allowed
+;;         to PARIALLY leave the screen
 ;;
 (define C1 (make-cow 10  3)) ; at 10, moving left -> right
 (define C2 (make-cow 20 -4)) ; at 20, moving left <- right
