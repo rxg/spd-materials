@@ -70,12 +70,12 @@
 (@htdf tock)
 (@signature WS -> WS)
 ;; produce the next ...
-;; !!!
+;!!!
 (define (tock ws) ...)
 
 
 (@htdf render)
 (@signature WS -> Image)
 ;; render ... 
-;; !!!
+;!!!
 (define (render ws) ...)

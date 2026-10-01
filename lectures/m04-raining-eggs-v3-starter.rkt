@@ -1,6 +1,6 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-beginner-reader.ss" "lang")((modname m04-raining-eggs-v3-solution) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #t)))
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname m04-raining-eggs-v3-starter) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #t)))
 (require 2htdp/image)
 (require 2htdp/universe)
 (require spd/tags)
@@ -144,7 +144,7 @@
 
 (@htdf render-eggs)
 (@signature ListOfEgg -> Image)
-;; Place YOSHI-EGG at appropriate location/rotation on MTS for each egg in loe
+;; place YOSHI-EGG at appropriate location/rotation on MTS for each egg in loe
 ;!!!
 (define (render-eggs loe) MTS) 
 

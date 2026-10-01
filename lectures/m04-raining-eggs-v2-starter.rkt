@@ -94,12 +94,12 @@
 (@htdf tock)
 (@signature ListOfEgg -> ListOfEgg)
 ;; produce the next eggs at appropriate locations and angles
-;; !!!
+;!!!
 (define (tock loe) ...)
 
 
 (@htdf render)
 (@signature ListOfEgg -> Image)
-;; Place YOSHI-EGG at appropriate location/rotation on MTS for each egg in loe
-;; !!!
+;; place YOSHI-EGG at appropriate location/rotation on MTS for each egg in loe
+;!!!
 (define (render loe) ...)
