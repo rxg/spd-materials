@@ -90,7 +90,7 @@
 
 (@htdf next-cow)
 (@signature Cow -> Cow)
-;; increase cow x by dx; if meets or exceeds edge, change dir and place at edge
+;; increase cow x by dx; if exceeds edge, change dir and place at edge
 (check-expect (next-cow (make-cow 20           3))
               (make-cow (+ 20 3)  3))              ;away from edges
 (check-expect (next-cow (make-cow 20          -3))
