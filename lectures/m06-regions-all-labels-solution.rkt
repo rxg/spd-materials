@@ -65,6 +65,7 @@
 
 
 (@htdd ListOfString)
+;; NOTE: ListOfString data definition omitted intentionally
 
 
 ;; Design a function that consumes a region and

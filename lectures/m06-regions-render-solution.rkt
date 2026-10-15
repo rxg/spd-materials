@@ -64,8 +64,6 @@
               (fn-for-lor (rest lor)))]))
 
 
-(@htdd ListOfString)
-
 
 ;; Design a function that renders a region and its subregions as
 ;; nested boxes. The rendering does not have to be pretty, but it must somehow

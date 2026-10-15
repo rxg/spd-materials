@@ -64,9 +64,6 @@
 
 
 
-(@htdd ListOfString)
-
-
 ;; Design a function that consumes a color and a region
 ;; and produces a list of all contained regions with the given color.
 ;; Include the root if it has that color.   Be sure to
