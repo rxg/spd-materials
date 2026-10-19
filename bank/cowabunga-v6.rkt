@@ -63,7 +63,7 @@
 ;;         dx is in pixels per tick
 ;;         CONSTRAINT: x is in the interval [0, WIDTH]
 ;;         Note that since x is the center of the cow, the cow is allowed
-;;         to PARIALLY leave the screen
+;;         to PARTIALLY leave the screen
 ;;
 (define C1 (make-cow 10  3)) ; at 10, moving left -> right
 (define C2 (make-cow 20 -4)) ; at 20, moving left <- right
