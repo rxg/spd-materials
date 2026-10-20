@@ -1212,6 +1212,17 @@ It can also be useful to add constant values which are extremely likely to be us
 ;; t   (cons String LOS)                   
 ;; a                                       
 </code></pre>
+<p><br />You can also place the parameters in the top left corner:</p>
+<pre><code>;; CROSS PRODUCT OF TYPE COMMENTS TABLE
+;;
+;;           lstb            empty           (cons String LOS)                
+;;   lsta
+;;                                    
+;;   empty                               
+;; 
+;;   (cons String LOS)                   
+;;                                       
+</code></pre>
 <p><br />In this case, where both arguments have 2 cases in their one-of type comments, the cross-product formed has 4 cells (2 * 2 = 4). The next step of the process is to use the cross product table to help form at least as many tests as there are cells. The upper left cell describes a scenario where both <tt>lsta</tt> and <tt>lstb</tt> are empty. The lower left cell is where <tt>lsta</tt> is non-empty but <tt>lstb</tt> is empty and so on. The lower right cell is where both lists are non-empty, and this case requires more than one test. So we end up with:&nbsp;</p>
 <pre><code>(check-expect (prefix=? empty empty) true)
 (check-expect (prefix=? empty (list "a" "b")) true)
