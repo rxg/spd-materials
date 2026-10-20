@@ -9,7 +9,8 @@
 #|
 Design a function that consumes two lists of strings and produces
 true if the first list is a prefix of the second, meaning that 
-the first list matches, 1 for 1, the beginning of the second list.
+every element of the first list appears, in order, at the front
+of the second list.
 
 For example:
 
