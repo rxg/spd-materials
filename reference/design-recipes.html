@@ -17,7 +17,7 @@
     <table title="Design Recipes" border="1" cellpadding="8" style="border: 1px solid #000000; padding: 8px; text-align: left; horizontal-align: left; vertical-align: top; max-width: 90%;">
 
       <thead>
-	<tr><th rowspan="2" scope="col" width="28%">Core Recipes</th><th rowspan="1" colspan="2" scope="col" width="50%" style="text-align: center;">Template Origin</th><th rowspan="2" scope="col">Abstraction</th></tr>
+	<tr><th rowspan="2" scope="col" width="28%">Core Recipes</th><th rowspan="1" colspan="2" scope="col" width="50%" style="text-align: center;">Template Origin</th><th rowspan="2" scope="col">Abstraction</th><th rowspan="2" scope="col">Other</th></tr>
 	<tr><th scope="col" width="25%">Data Driven</th><th scope="col" width="25%">Control Driven</th></tr>
       </thead>
       <tbody>
@@ -27,6 +27,7 @@
 <td><a href="#Data">Data Driven Templates</a><br /> <small> Produce template for a data definition based on the form of the type comment. </small></td>
 <td><a href="#FuncComp">Function Composition</a></td>
 <td><a href="#Examples">From Examples</a> <br /> <small> Produce an abstract function given two similar functions. </small></td>
+<td><a href="#Helpers">Helper Rules</a></td>
 </tr>
 
 <tr>
@@ -34,6 +35,7 @@
 <td><a href="#2One-of">2 One-of Data</a> <br /> <small> Functions where 2 arguments have a one-of in their type comments. </small></td>
 <td><a href="#Failure">Failure Handling</a></td>
 <td><a href="#Type">From Type Comments</a> <br /> <small> Produce a fold function given type comments. </small></td>
+<td/>
 </tr>
 
 <tr>
@@ -41,24 +43,28 @@
 <td rowspan="3"></td>
 <td><a href="#Backtrack">Backtracking Search</a></td>
 <td></td>
+<td/>
 </tr>
 
 <tr>
 <td rowspan="3"></td>
 <td><a href="#GenRec">Generative Recursion</a></td>
 <td><a href="#Using">Using Abstract Functions</a></td>
+<td/>
 </tr>
 
 
 <tr>
 <td><a href="#Accumulators">Accumulators</a></td>
 <td></td>
+<td/>
 </tr>
 
 
 <tr>
 <td colspan="2" scope="col" style="text-align: center;"><a href="#TempBlend">Template Blending</a></td>
 <td></td>
+<td/>
 </tr>
 
 </tbody>
@@ -1153,14 +1159,20 @@ It can also be useful to add constant values which are extremely likely to be us
 <p>As with self-reference, its a good idea to draw a mutual-reference line on the data definition and ensure you have corresponding mutual recursion lines in your templates.</p>
 <h4>Testing</h4>
 <p>The principles above can also be used to understand how many tests a data definition implies. Simply put, the set of tests/examples should cover all cases, call all helper functions, involve all selectors, and avoid duplicated values.</p>
-<h4>Additional Design Rules for Helpers</h4>
+
+<a name="Helpers">
+<hr /><hr /><hr />
+<div align="right"><a href="#top">Back to Design Recipes Table</a></div>
+<h2>Design Rules for Helpers</h2>
 <p>During coding three additional guidelines suggest situations under which a helper function should be added:</p>
 <ol>
-<li>Use a separate function for each difference between quantities in a problem.</li>
-<li>If a subtask requires operating on arbitrary sized data a helper function must be used.</li>
-<li>If a subtask involves special domain knowledge a helper function should be used.</li>
-<li>In addition always keep the "one task per function" goal in mind. If part of a function you are designing seems to be a well-defined subtask put that into a helper function.</li>
+  <li><strong>Reference Rule:</strong> When you have one data definition that references another non-primitive data definition in it's type comment, a natural helper must be present in the template.</li>
+<li><strong>Function Composition Rule:</strong> When a function must perform two or more distinct and complete operations on the consumed data, function composition must be used.</li>
+<li><strong>Arbitrary Sized Data Rule:</strong> If a subtask requires operating on arbitrary sized data, a helper function must be used.</li>
+<li><strong>Knowledge Domain Shift Rule:</strong> If function contains a well-defined subtask, or a task that involves special domain knowledge, put that into a helper function.</li>
 </ol>
+<p>In addition always keep the <strong>one task per function</strong> goal in mind. If part of a function you are designing seems to be a well-defined subtask put that into a helper function.</p>
+
 
 <a name="2Compound">
 <hr /><hr /><hr />
