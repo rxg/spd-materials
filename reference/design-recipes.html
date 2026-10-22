@@ -1335,17 +1335,17 @@ It can also be useful to add constant values which are extremely likely to be us
 (@template 
  (define (fn-for-x x)
    (if (not (false? (fn-that-might-fail &ltargs&gt))) ;does this function call fail?
-       (fn-that-might-fail &ltargs&gt)                ;if not, produce it
+       (... (fn-that-might-fail &ltargs&gt))          ;if not, do something with it
        &ltsome alternative result&gt)))               ;if so, produce something else
 </pre>
 
-Note that once we have local, this gets re-written as:
+Note that once we have <code>local</code>, this gets re-written as:
 <pre>
 (@template   
  (define (fn-for-x x)
    (local [(define try (fn-that-might-fail &ltargs&gt))]
      (if (not (false? try))
-         try
+         (... try)
          &ltsome alternative result&gt))))
 </pre>
 </nl>
