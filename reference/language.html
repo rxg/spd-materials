@@ -274,11 +274,12 @@ true              ;so entire or produces true</pre>
 (define (ormap p lox) ...)
 
 (@signature (X Y -&gt; Y) Y (listof X) -&gt; Y)
-;; (foldr f base (list x-1 ... x-n)) = (f x-1 ... (f x-n base))
+;; abstract fold function for (listof X)
 (define (foldr f base lox) ...)
 
 (@signature (X Y -&gt; Y) Y (listof X) -&gt; Y)
-;; (foldl f base (list x-1 ... x-n)) = (f x-n ... (f x-1 base))
-(define (foldl f base lox) ...)
+;; abstract fold function for (listof X) with result-so-far accumulator
+;; NOTE: REQUIRES ACCUMULATOR TYPE AND INVARIANT WHEN USED
+(define (foldl update-rsf rsf lox) ...)
 </pre>
 <p></p>
