@@ -67,7 +67,11 @@
 (@signature (Natural Natural Y -> X) (X Y -> Y) Y Course -> X)
 ;; abstract fold for Course
 (check-expect (fold-course make-course cons empty C110) C110)
-
+(check-expect (local [(define (c1 n cr rmr) (add1 rmr))
+                      (define (c2 rmr rnr) (+ rmr rnr))
+                      (define b1 0)]
+                (fold-course c1 c2 b1 C110))
+              20)
 
 (@template-origin Course (listof Course) encapsulated)
 
