@@ -159,5 +159,5 @@
 
 
 (define (reverse-spider s ke)
-   (cond [(key=? ke " ") (make-spider (spider-y s) (- (spider-dy s)))]
-         [else s]))
+  (cond [(key=? ke " ") (make-spider (spider-y s) (- (spider-dy s)))]
+        [else s]))

@@ -121,7 +121,7 @@
               (grade-template-origin (KeyEvent Spider))
               (grade-template/body (s ke)
                   (cond [(key=? ke " ") (... (spider-y s) (spider-dy s))]
-                        [else (... (spider-y s) (spider-dy s))]))
+                        [else (... (spider-y s) (spider-dy s) ke)]))
 
               (grade-questions-intact/body key-handler-defn (s ke)
                   (cond [(key=? ke " ") (...)]
