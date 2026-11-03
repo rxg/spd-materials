@@ -1,6 +1,6 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-intermediate-reader.ss" "lang")((modname m08-abstract-functions-starter) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #t)))
+#reader(lib "htdp-intermediate-reader.ss" "lang")((modname m08-from-examples-starter) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #t)))
 (require spd/tags)
 (@assignment lectures/m08-from-examples)
 
@@ -66,7 +66,7 @@
 ;;                   [else
 ;;                    (local [(define try (fn-for-region (first lor)))]
 ;;                      (if (not (false? try))
-;;                          try
+;;                          (... try)
 ;;                          (fn-for-lor (rest lor))))]))]
 ;; 
 ;;     (fn-for-region r)))
