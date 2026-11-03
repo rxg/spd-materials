@@ -61,6 +61,8 @@
         O W O W W
         W W O O O))
 
+;; <template omitted intentionally>
+
 (@htdd Position)
 
 (define-struct pos (x y))
