@@ -1,6 +1,6 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-intermediate-lambda-reader.ss" "lang")((modname m09-search-triangle-solitaire-v4) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #t)))
+#reader(lib "htdp-intermediate-lambda-reader.ss" "lang")((modname m09-search-triangle-solitaire-solution) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #t)))
 (require spd/tags)
 (@assignment lectures/m09-search-triangle-solitaire)
 
@@ -10,11 +10,11 @@
 ;; m09-search-triangle-solitaire-starter.rkt  description w/ images
 ;; m09-search-triangle-solitaire-v2.rkt       DDs, sig/purp/tests for solve
 ;; m09-search-triangle-solitaire-v3.rkt       solve and wish list entries
-;; m09-search-triangle-solitaire-v4.rkt       complete solution
+;; m09-search-triangle-solitaire-solution.rkt complete solution
 
 
 ;; ================================
-;; Data defininitions and constants
+;; Data definitions and constants
 (@problem 1)
 (@htdd Board)
 ;; Board is (listof Boolean) of length 15
@@ -22,10 +22,15 @@
 ;;   true  means a peg is in the hole
 ;;   false means the hole is empty
 
+;; <examples down below>
+;; <template intentionally omitted>
+
 (@htdd Position)
 ;; Position is Natural
 ;; interp. 0 based indexes into a board
 ;; CONSTRAINT: is in [0, 14]
+
+;; <examples and templates intentionally omitted>
 
 (@htdd Jump)
 (define-struct jump (from over to))
@@ -34,13 +39,11 @@
 ;;  a jump on the board, with the from, to and
 ;;  jumped over positions
 
-(define POSITIONS
-  ;; (list         0
-  ;;              1 2
-  ;;            3  4  5
-  ;;          6  7  8  9
-  ;;        10 11 12 13 14))
-  (list 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14))
+;; <examples intentionally omitted>
+(define (fn-for-jump j)
+  (... (jump-from j)
+       (jump-over j)
+       (jump-to j)))
 
 (define MTB  (build-list 15 (lambda (n) false)))
 

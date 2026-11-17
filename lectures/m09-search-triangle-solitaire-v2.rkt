@@ -10,7 +10,7 @@
 
 
 ;; ================================
-;; Data defininitions and constants
+;; Data definitions and constants
 (@problem 1)
 (@htdd Board)
 ;; Board is (listof Boolean) of length 15
@@ -18,10 +18,15 @@
 ;;   true  means a peg is in the hole
 ;;   false means the hole is empty
 
+;; <examples down below>
+;; <template intentionally omitted>
+
 (@htdd Position)
 ;; Position is Natural
 ;; interp. 0 based indexes into a board
 ;; CONSTRAINT: is in [0, 14]
+
+;; <examples and templates intentionally omitted>
 
 (@htdd Jump)
 (define-struct jump (from over to))
@@ -29,6 +34,12 @@
 ;; interp.
 ;;  a jump on the board, with the from, to and
 ;;  jumped over positions
+
+;; <examples intentionally omitted>
+(define (fn-for-jump j)
+  (... (jump-from j)
+       (jump-over j)
+       (jump-to j)))
 
 (define POSITIONS
   ;; (list         0
