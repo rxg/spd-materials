@@ -22,13 +22,13 @@
 ;; interp.
 ;;   a binary tree where each node as a key, value and two sub-nodes
 
-(define (fn-for-bt t)
-  (cond [(false? t) (...)]
+(define (fn-for-bt bt)
+  (cond [(false? bt) (...)]
         [else
-         (... (node-k t)
-              (node-v t)
-              (fn-for-bt (node-l t))
-              (fn-for-bt (node-r t)))]))
+         (... (node-k bt)
+              (node-v bt)
+              (fn-for-bt (node-l bt))
+              (fn-for-bt (node-r bt)))]))
 
 
 (define BT1 (make-node 100 "a"
